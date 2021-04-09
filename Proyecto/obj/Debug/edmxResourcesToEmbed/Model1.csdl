@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROYECTOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Experience">
+    <Key>
+      <PropertyRef Name="IDExperiencia" />
+    </Key>
+    <Property Name="IDExperiencia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C0_2_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C2_4_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C4_6_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C6_8_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C8_10_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C_10_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Jobs">
+    <Key>
+      <PropertyRef Name="TituloID" />
+    </Key>
+    <Property Name="TituloID" Type="Int32" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Languages">
+    <Key>
+      <PropertyRef Name="IDLanguages" />
+    </Key>
+    <Property Name="IDLanguages" Type="Int32" Nullable="false" />
+    <Property Name="Languages1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Passwords">
+    <Key>
+      <PropertyRef Name="IDPassword" />
+    </Key>
+    <Property Name="IDPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="PROYECTOModel.UsersPasswords" FromRole="Passwords" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Qualifications">
+    <Key>
+      <PropertyRef Name="IDTitulacion" />
+    </Key>
+    <Property Name="IDTitulacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="University_Degree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="College_Diploma" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Graduate_Certificate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Master_Degree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Apprenticeship_Certificate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Traineeship_Degree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bachelor_Degree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Technologies">
+    <Key>
+      <PropertyRef Name="IDTechnologies" />
+    </Key>
+    <Property Name="IDTechnologies" Type="Int32" Nullable="false" />
+    <Property Name="Technologies1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="IDUser" />
+    </Key>
+    <Property Name="IDUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Passwords" Relationship="PROYECTOModel.UsersPasswords" FromRole="Users" ToRole="Passwords" />
+  </EntityType>
+  <EntityContainer Name="PROYECTOEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Experience" EntityType="Self.Experience" />
+    <EntitySet Name="Jobs" EntityType="Self.Jobs" />
+    <EntitySet Name="Languages" EntityType="Self.Languages" />
+    <EntitySet Name="Passwords" EntityType="Self.Passwords" />
+    <EntitySet Name="Qualifications" EntityType="Self.Qualifications" />
+    <EntitySet Name="Technologies" EntityType="Self.Technologies" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="UsersPasswords" Association="PROYECTOModel.UsersPasswords">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Passwords" EntitySet="Passwords" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="UsersPasswords">
+    <End Type="PROYECTOModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="PROYECTOModel.Passwords" Role="Passwords" Multiplicity="*" />
+  </Association>
+</Schema>

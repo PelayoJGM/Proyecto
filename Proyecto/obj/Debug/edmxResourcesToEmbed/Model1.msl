@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PROYECTOModelStoreContainer" CdmEntityContainer="PROYECTOEntities">
+    <EntitySetMapping Name="Experience">
+      <EntityTypeMapping TypeName="PROYECTOModel.Experience">
+        <MappingFragment StoreEntitySet="Experience">
+          <ScalarProperty Name="IDExperiencia" ColumnName="IDExperiencia" />
+          <ScalarProperty Name="C0_2_years" ColumnName="0-2 years" />
+          <ScalarProperty Name="C2_4_years" ColumnName="2-4 years" />
+          <ScalarProperty Name="C4_6_years" ColumnName="4-6 years" />
+          <ScalarProperty Name="C6_8_years" ColumnName="6-8 years" />
+          <ScalarProperty Name="C8_10_years" ColumnName="8-10 years" />
+          <ScalarProperty Name="C_10_years" ColumnName="+10 years" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="PROYECTOModel.Jobs">
+        <MappingFragment StoreEntitySet="Jobs">
+          <ScalarProperty Name="TituloID" ColumnName="TituloID" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="PROYECTOModel.Languages">
+        <MappingFragment StoreEntitySet="Languages">
+          <ScalarProperty Name="IDLanguages" ColumnName="IDLanguages" />
+          <ScalarProperty Name="Languages1" ColumnName="Languages" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Passwords">
+      <EntityTypeMapping TypeName="PROYECTOModel.Passwords">
+        <MappingFragment StoreEntitySet="Passwords">
+          <ScalarProperty Name="IDPassword" ColumnName="IDPassword" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Qualifications">
+      <EntityTypeMapping TypeName="PROYECTOModel.Qualifications">
+        <MappingFragment StoreEntitySet="Qualifications">
+          <ScalarProperty Name="IDTitulacion" ColumnName="IDTitulacion" />
+          <ScalarProperty Name="University_Degree" ColumnName="University Degree" />
+          <ScalarProperty Name="College_Diploma" ColumnName="College Diploma" />
+          <ScalarProperty Name="Graduate_Certificate" ColumnName="Graduate Certificate" />
+          <ScalarProperty Name="Master_Degree" ColumnName="Master Degree" />
+          <ScalarProperty Name="Apprenticeship_Certificate" ColumnName="Apprenticeship Certificate" />
+          <ScalarProperty Name="Traineeship_Degree" ColumnName="Traineeship Degree" />
+          <ScalarProperty Name="Bachelor_Degree" ColumnName="Bachelor Degree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Technologies">
+      <EntityTypeMapping TypeName="PROYECTOModel.Technologies">
+        <MappingFragment StoreEntitySet="Technologies">
+          <ScalarProperty Name="IDTechnologies" ColumnName="IDTechnologies" />
+          <ScalarProperty Name="Technologies1" ColumnName="Technologies" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="PROYECTOModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="User" ColumnName="User" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

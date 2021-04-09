@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROYECTOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Experience">
+    <Key>
+      <PropertyRef Name="IDExperiencia" />
+    </Key>
+    <Property Name="IDExperiencia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="0-2 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="2-4 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="4-6 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="6-8 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="8-10 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="+10 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Jobs">
+    <Key>
+      <PropertyRef Name="TituloID" />
+    </Key>
+    <Property Name="TituloID" Type="int" Nullable="false" />
+    <Property Name="Titulo" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Languages">
+    <Key>
+      <PropertyRef Name="IDLanguages" />
+    </Key>
+    <Property Name="IDLanguages" Type="int" Nullable="false" />
+    <Property Name="Languages" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Passwords">
+    <Key>
+      <PropertyRef Name="IDPassword" />
+    </Key>
+    <Property Name="IDPassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Qualifications">
+    <Key>
+      <PropertyRef Name="IDTitulacion" />
+    </Key>
+    <Property Name="IDTitulacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="University Degree" Type="nvarchar" MaxLength="50" />
+    <Property Name="College Diploma" Type="nvarchar" MaxLength="50" />
+    <Property Name="Graduate Certificate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Master Degree" Type="nvarchar" MaxLength="50" />
+    <Property Name="Apprenticeship Certificate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Traineeship Degree" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bachelor Degree" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Technologies">
+    <Key>
+      <PropertyRef Name="IDTechnologies" />
+    </Key>
+    <Property Name="IDTechnologies" Type="int" Nullable="false" />
+    <Property Name="Technologies" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="IDUser" />
+    </Key>
+    <Property Name="IDUser" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="User" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PROYECTOModelStoreContainer">
+    <EntitySet Name="Experience" EntityType="Self.Experience" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Languages" EntityType="Self.Languages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Passwords" EntityType="Self.Passwords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Qualifications" EntityType="Self.Qualifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Technologies" EntityType="Self.Technologies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

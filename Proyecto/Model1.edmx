@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PROYECTOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Experience">
+          <Key>
+            <PropertyRef Name="IDExperiencia" />
+          </Key>
+          <Property Name="IDExperiencia" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="0-2 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="2-4 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="4-6 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="6-8 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="8-10 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="+10 years" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="TituloID" />
+          </Key>
+          <Property Name="TituloID" Type="int" Nullable="false" />
+          <Property Name="Titulo" Type="nvarchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="Languages">
+          <Key>
+            <PropertyRef Name="IDLanguages" />
+          </Key>
+          <Property Name="IDLanguages" Type="int" Nullable="false" />
+          <Property Name="Languages" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Passwords">
+          <Key>
+            <PropertyRef Name="IDPassword" />
+          </Key>
+          <Property Name="IDPassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Qualifications">
+          <Key>
+            <PropertyRef Name="IDTitulacion" />
+          </Key>
+          <Property Name="IDTitulacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="University Degree" Type="nvarchar" MaxLength="50" />
+          <Property Name="College Diploma" Type="nvarchar" MaxLength="50" />
+          <Property Name="Graduate Certificate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Master Degree" Type="nvarchar" MaxLength="50" />
+          <Property Name="Apprenticeship Certificate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Traineeship Degree" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bachelor Degree" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Technologies">
+          <Key>
+            <PropertyRef Name="IDTechnologies" />
+          </Key>
+          <Property Name="IDTechnologies" Type="int" Nullable="false" />
+          <Property Name="Technologies" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="IDUser" />
+          </Key>
+          <Property Name="IDUser" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="User" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PROYECTOModelStoreContainer">
+          <EntitySet Name="Experience" EntityType="Self.Experience" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Languages" EntityType="Self.Languages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Passwords" EntityType="Self.Passwords" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Qualifications" EntityType="Self.Qualifications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Technologies" EntityType="Self.Technologies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PROYECTOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Experience">
+          <Key>
+            <PropertyRef Name="IDExperiencia" />
+          </Key>
+          <Property Name="IDExperiencia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C0_2_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C2_4_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C4_6_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C6_8_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C8_10_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_10_years" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="TituloID" />
+          </Key>
+          <Property Name="TituloID" Type="Int32" Nullable="false" />
+          <Property Name="Titulo" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Languages">
+          <Key>
+            <PropertyRef Name="IDLanguages" />
+          </Key>
+          <Property Name="IDLanguages" Type="Int32" Nullable="false" />
+          <Property Name="Languages1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Passwords">
+          <Key>
+            <PropertyRef Name="IDPassword" />
+          </Key>
+          <Property Name="IDPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="PROYECTOModel.UsersPasswords" FromRole="Passwords" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Qualifications">
+          <Key>
+            <PropertyRef Name="IDTitulacion" />
+          </Key>
+          <Property Name="IDTitulacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="University_Degree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="College_Diploma" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Graduate_Certificate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Master_Degree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Apprenticeship_Certificate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Traineeship_Degree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bachelor_Degree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Technologies">
+          <Key>
+            <PropertyRef Name="IDTechnologies" />
+          </Key>
+          <Property Name="IDTechnologies" Type="Int32" Nullable="false" />
+          <Property Name="Technologies1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="IDUser" />
+          </Key>
+          <Property Name="IDUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Passwords" Relationship="PROYECTOModel.UsersPasswords" FromRole="Users" ToRole="Passwords" />
+        </EntityType>
+        <EntityContainer Name="PROYECTOEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Experience" EntityType="Self.Experience" />
+          <EntitySet Name="Jobs" EntityType="Self.Jobs" />
+          <EntitySet Name="Languages" EntityType="Self.Languages" />
+          <EntitySet Name="Passwords" EntityType="Self.Passwords" />
+          <EntitySet Name="Qualifications" EntityType="Self.Qualifications" />
+          <EntitySet Name="Technologies" EntityType="Self.Technologies" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <AssociationSet Name="UsersPasswords" Association="PROYECTOModel.UsersPasswords">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Passwords" EntitySet="Passwords" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="UsersPasswords">
+          <End Type="PROYECTOModel.Users" Role="Users" Multiplicity="1" />
+          <End Type="PROYECTOModel.Passwords" Role="Passwords" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PROYECTOModelStoreContainer" CdmEntityContainer="PROYECTOEntities">
+          <EntitySetMapping Name="Experience">
+            <EntityTypeMapping TypeName="PROYECTOModel.Experience">
+              <MappingFragment StoreEntitySet="Experience">
+                <ScalarProperty Name="IDExperiencia" ColumnName="IDExperiencia" />
+                <ScalarProperty Name="C0_2_years" ColumnName="0-2 years" />
+                <ScalarProperty Name="C2_4_years" ColumnName="2-4 years" />
+                <ScalarProperty Name="C4_6_years" ColumnName="4-6 years" />
+                <ScalarProperty Name="C6_8_years" ColumnName="6-8 years" />
+                <ScalarProperty Name="C8_10_years" ColumnName="8-10 years" />
+                <ScalarProperty Name="C_10_years" ColumnName="+10 years" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="PROYECTOModel.Jobs">
+              <MappingFragment StoreEntitySet="Jobs">
+                <ScalarProperty Name="TituloID" ColumnName="TituloID" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Languages">
+            <EntityTypeMapping TypeName="PROYECTOModel.Languages">
+              <MappingFragment StoreEntitySet="Languages">
+                <ScalarProperty Name="IDLanguages" ColumnName="IDLanguages" />
+                <ScalarProperty Name="Languages1" ColumnName="Languages" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Passwords">
+            <EntityTypeMapping TypeName="PROYECTOModel.Passwords">
+              <MappingFragment StoreEntitySet="Passwords">
+                <ScalarProperty Name="IDPassword" ColumnName="IDPassword" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qualifications">
+            <EntityTypeMapping TypeName="PROYECTOModel.Qualifications">
+              <MappingFragment StoreEntitySet="Qualifications">
+                <ScalarProperty Name="IDTitulacion" ColumnName="IDTitulacion" />
+                <ScalarProperty Name="University_Degree" ColumnName="University Degree" />
+                <ScalarProperty Name="College_Diploma" ColumnName="College Diploma" />
+                <ScalarProperty Name="Graduate_Certificate" ColumnName="Graduate Certificate" />
+                <ScalarProperty Name="Master_Degree" ColumnName="Master Degree" />
+                <ScalarProperty Name="Apprenticeship_Certificate" ColumnName="Apprenticeship Certificate" />
+                <ScalarProperty Name="Traineeship_Degree" ColumnName="Traineeship Degree" />
+                <ScalarProperty Name="Bachelor_Degree" ColumnName="Bachelor Degree" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Technologies">
+            <EntityTypeMapping TypeName="PROYECTOModel.Technologies">
+              <MappingFragment StoreEntitySet="Technologies">
+                <ScalarProperty Name="IDTechnologies" ColumnName="IDTechnologies" />
+                <ScalarProperty Name="Technologies1" ColumnName="Technologies" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="PROYECTOModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="User" ColumnName="User" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
